@@ -1,0 +1,14 @@
+python-telegram-bot==13.7
+openai-whisper
+TTS
+torch
+torchaudio
+schedule
+feedparser
+requests
+flask
+pillow
+beautifulsoup4
+git+https://github.com/mlfoundations/open_clip.git
+yt-dlp
+transformers
