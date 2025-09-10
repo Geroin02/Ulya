@@ -2,12 +2,14 @@ FROM python:3.10-slim
 
 WORKDIR /app
 
-# Ставим системные пакеты (git и ffmpeg пригодятся позже)
 RUN apt-get update && apt-get install -y git ffmpeg && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
+
+# Сообщаем Render, что приложение слушает порт 5000
+EXPOSE 5000
 
 CMD ["python", "main.py"]
